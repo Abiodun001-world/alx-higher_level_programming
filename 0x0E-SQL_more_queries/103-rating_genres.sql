@@ -1,12 +1,11 @@
--- Lists all genres from the database hbtn_0d_tvshows along with the number of
--- shows linked to each.
--- Does not display genres without linked shows.
--- Records are ordered by descending number of shows linked.
-SELECT g.`name` AS `genre`,
-       COUNT(*) AS `number_of_shows`
-  FROM `tv_genres` AS g
-       INNER JOIN `tv_show_genres` AS t
-       ON g.`id` = t.`genre_id`
- GROUP BY g.`name`
- ORDER BY `number_of_shows` DESC;
- 
+-- List all genres by their ratings
+SELECT tv_genres.name, SUM(tv_show_ratings.rate) AS rating
+	FROM tv_genres
+	JOIN tv_show_genres
+	ON tv_genres.id = tv_show_genres.genre_id
+	JOIN tv_shows
+	ON tv_shows.id = tv_show_genres.show_id
+	JOIN tv_show_ratings
+	ON tv_shows.id = tv_show_ratings.show_id
+	GROUP BY tv_genres.name
+	ORDER BY rating DESC;

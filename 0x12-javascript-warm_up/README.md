@@ -1,9 +1,13 @@
 ## Install Node 14 for this project
+
 $ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 $ sudo apt-get install -y nodejs
+
 ## Install semi-standard
 <a href="https://github.com/standard/semistandard">Documentation</a>
+
 $ sudo npm install semistandard --global
+
 ## Background Context
 JavaScript is used for many things. Here, you will use JavaScript for 2 reasons:
 

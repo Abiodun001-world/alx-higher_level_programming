@@ -40,7 +40,8 @@ $ sudo apt-get install -y nodejs
 
 $ sudo npm install semistandard --global
 # Install request module and use it
- <a href"https://github.com/request/request">Documentation</a>
+
+<a href="https://github.com/request/request">Documentation</a>
 
 $ sudo npm install request --global
 $ export NODE_PATH=/usr/lib/node_modules

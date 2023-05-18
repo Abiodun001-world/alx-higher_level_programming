@@ -1,1 +1,2 @@
 - Alx-Higher_Level_Programming
+- This repository contains folders and files that I utilized during my time as a software engineer at ALX Africa to enhance my learning.
